@@ -1,6 +1,6 @@
 num = int(input())
-
 num_list = list(map(int, input().split()))
+new_arr = [elem**2 for elem in num_list]
 
 for i in range(len(num_list)):
-    print(num_list[i] ** 2, end=' ')
+    print(new_arr[i], end=' ')
