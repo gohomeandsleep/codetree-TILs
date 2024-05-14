@@ -1,8 +1,9 @@
 num_list = list(map(int, input().split()))
 
-if num_list[-1] == 0:
-    for i in range(len(num_list) -1):
-        print(num_list[len(num_list) - i - 2], end=' ')
-else:
-    for i in range(len(num_list)):
-        print(num_list[len(num_list) - i - 1], end=' ')
+for i in range(len(num_list)):
+    if num_list[i] == 0:
+        num_list = num_list[:i]
+        break
+
+for i in range(len(num_list)):
+    print(num_list[len(num_list)-i-1], end=' ')
