@@ -1,6 +1,6 @@
 inst = list(input())
 
-x,y, rot = 0, 0, 40000
+x,y, rot = 0, 0, 0
 
 rot_x = [0, 1, 0, -1]
 rot_y = [1, 0, -1, 0]
