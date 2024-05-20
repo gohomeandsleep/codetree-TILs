@@ -10,6 +10,6 @@ for _ in range(n):
     if dir == 'E':
         x += int(num)
     if dir == 'W':
-        x += int(num)
+        x -= int(num)
 
 print(x, y)
