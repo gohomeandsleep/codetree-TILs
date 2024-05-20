@@ -1,32 +1,26 @@
-n, t = map(int, input().split())
-#n*n array, time
-r,c,d = input().split()
-#primary loc r->y, c->x, direction
-r, c = int(r), int(c)
-dx = [1,-1,0,0]
-dy = [0,0,1,-1]
+n,t = tuple(map(int, input().split()))
+x,y,c_dir = tuple(input().split())
 
-direction = {
-    'R' : 0,
-    'L' : 1,
-    'U' : 2,
-    'D' : 3
+mapper = {
+    'R': 0,
+    'D': 1,
+    'U': 2,
+    'L': 3
 }
 
-c_dir = direction[d]
-while t > 0:
-    if c == 0:
-        d = 'R'
-    elif r == 0:
-        d = 'D'
-    elif c == n-1:
-        d = 'L'
-    elif r == n-1:
-        d = 'U'
-    else:
-        c = c + dx[direction[d]]
-        r = r + dy[direction[d]]
-    print(c, r, d)
-    t -= 1
+dxs= [0,1,-1,0]
+dys=[1,0,0,-1]
 
-print(c, r)
+x, y, move_dir = int(x) - 1, int(y) - 1, mapper[c_dir]
+
+def in_range(x,y):
+    return 0 <=x and x<n and 0<=y and y<n
+
+for _ in range(t):
+    nx, ny = x + dxs[move_dir], y+dys[move_dir]
+    if in_range(nx, ny):
+        x,y = nx, ny
+    else:
+        move_dir = 3 - move_dir
+
+print(x+1, y+1)
