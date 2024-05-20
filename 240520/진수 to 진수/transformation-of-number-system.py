@@ -14,4 +14,4 @@ while num >= b:
     num = num // b
 res_list.append(num)
 
-print(*res_list, sep='')
+print(*res_list[::-1], sep='')
