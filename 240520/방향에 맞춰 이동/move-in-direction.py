@@ -1,15 +1,13 @@
 n = int(input())
 
+dir_lst = ['N', 'S', 'E', 'W']
+x_lst = [0,0,1,-1]
+y_lst = [1,-1,0,0]
 x,y = 0, 0
-for _ in range(n):
+for i in range(n):
     dir, num = input().split()
-    if dir == 'N':
-        y += int(num)
-    if dir == 'S':
-        y -= int(num)
-    if dir == 'E':
-        x += int(num)
-    if dir == 'W':
-        x -= int(num)
+    dir_num = int(dir_lst.index(dir))
+    x = x + int(num) * x_lst[dir_num]
+    y = y + int(num) * y_lst[dir_num]
 
 print(x, y)
