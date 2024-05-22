@@ -14,8 +14,8 @@ for i in range(n):
             sum += (j+1) * lst[i+j+1]
             #print((j+1) * lst[i+j+1], end=' ')
         except:
-            sum += (j+1) * lst[i+j+1-5]
-            #print((j+1) * lst[i+j+1-5], end=' ')
+            sum += (j+1) * lst[i+j+1-n]
+            #print((j+1) * lst[i+j+1-n], end=' ')
     #print(sum)
 
     if sum < min_sum:
