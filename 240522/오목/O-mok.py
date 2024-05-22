@@ -1,8 +1,8 @@
 lst = [list(map(int, input().split())) for _ in range(19)]
 
 ans = 0
-for i in range(19):
-    for j in range(19):
+for i in range(15):
+    for j in range(15):
         if lst[i][j] != 0:
             primary = lst[i][j]
             #case1. 직선으로 같을때
