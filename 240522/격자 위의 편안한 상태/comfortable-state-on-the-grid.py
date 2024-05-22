@@ -8,10 +8,14 @@ dy = [0, 0, 1, -1]
 for _ in range(m):
     r, c = map(int, input().split())
     lst[r-1][c-1] = 1
+
+
     cnt = 0
     for i in range(4):
-        try: 
-            if lst[r-1-dx[i]][c-1-dy[i]] == 1:
+        try:
+            if r-1-dx[i] == -1 or c-1+dy[i] == -1:
+                continue
+            elif lst[r-1+dx[i]][c-1+dy[i]] == 1:
                 cnt += 1
         except:
             cnt += 0
