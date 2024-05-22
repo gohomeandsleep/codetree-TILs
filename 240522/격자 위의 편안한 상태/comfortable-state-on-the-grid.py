@@ -13,7 +13,7 @@ for _ in range(m):
     cnt = 0
     for i in range(4):
         try:
-            if r-1-dx[i] == -1 or c-1+dy[i] == -1:
+            if r-1-dx[i] < 0 or c-1+dy[i] < 0:
                 continue
             elif lst[r-1+dx[i]][c-1+dy[i]] == 1:
                 cnt += 1
