@@ -9,6 +9,4 @@ for i in range(n):
                 if lst[j] <= lst[k]:
                     cnt +=1
 
-
-
 print(cnt)
