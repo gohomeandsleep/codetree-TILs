@@ -6,22 +6,13 @@ first = lst[0][0]
 other = lst[height-1][width-1]
 
 cnt = 0
-for i in range(1, height):
-    for j in range(1, width):
+for i in range(1,height-1):
+    for j in range(1, width-1):
         if lst[i][j] == other:
-            for k in range(i, height-i):
-                for l in range(j, width-j):
+            #print(i, j, end='\n----------\n')
+            for k in range(i+1, height-1):
+                for l in range(j+1, width-1):
                     if lst[k][l] == first:
-
-                        cnt +=1
-
+                        #print(k, l, cnt+1)
+                        cnt += 1
 print(cnt)
-# max_cnt = 0
-# for i in range(n):
-#     for j in range(n - 1):
-#         for k in range(i + 1, n):
-#             for l in range(n - 1):
-#                 max_cnt = max(max_cnt, arr[i][j] + arr[i][j + 1]
-#                                      + arr[k][l] + arr[k][l + 1])
-
-# print(max_cnt)
