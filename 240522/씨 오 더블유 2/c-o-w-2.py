@@ -6,8 +6,7 @@ for i in range(n):
     if lst[i] == 'C':
         for j in range(i, n):
             if lst[j] == 'O':
-                for k in range(j, n):
-                    if lst[k] == 'W':
-                        res+=1
+                lst_part = lst[j:n+1]
+                res += lst_part.count('W')
 
 print(res)
