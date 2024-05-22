@@ -14,3 +14,6 @@ for i in range(19):
             if lst[i+1][j+1] == primary and lst[i+2][j+2] == primary and lst[i+3][j+3] == primary and lst[i+4][j+4] == primary:
                 print(primary)
                 print(i+3, j+3)
+            if lst[i+1][j-1] == primary and lst[i+2][j-2] == primary and lst[i+3][j-3] == primary and lst[i+4][j-4] == primary:
+                print(primary)
+                print(i+3, j-1)
