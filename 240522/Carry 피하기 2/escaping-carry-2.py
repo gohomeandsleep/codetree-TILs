@@ -24,4 +24,7 @@ for i in range(n):
             if carry_check(lst[i], lst[j], lst[k]) and psum > max_sum:
                 max_sum = psum
 
-print(max_sum)
+if max_sum != -sys.maxsize:
+    print(max_sum)
+else:
+    print(-1)
