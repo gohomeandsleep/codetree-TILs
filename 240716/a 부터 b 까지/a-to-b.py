@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 
-while a < b:
+while a <= b:
     print(a, end=' ')
     if a % 2 == 0:
         a += 3
