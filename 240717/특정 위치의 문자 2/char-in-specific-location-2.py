@@ -1,5 +1,5 @@
-lst = list(input())
+lst = list(input().split(' '))
 
-for i in range(1, len(lst)+1):
-    if i % 3 == 2:
-        print(lst[i], end='')
+for i in range(len(lst)):
+    if i % 3 == 1:
+        print(lst[i], end=' ')
