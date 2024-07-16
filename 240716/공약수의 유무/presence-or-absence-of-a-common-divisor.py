@@ -7,7 +7,7 @@ a, b = map(int, input().split())
 
 res = False
 for i in range(a, b+1):
-    if gcd(i, 960) != 1:
+    if gcd(i, 960) == i:
         res = True
 
 if res == True:
