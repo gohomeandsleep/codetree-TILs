@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 
-if a < b:
+if a > b:
     a, b = b, a
 
 res = 0
