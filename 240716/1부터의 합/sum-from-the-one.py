@@ -3,7 +3,8 @@ n = int(input())
 i = 1
 res = 0
 while n > res:
-    i += 1
     res += i
+    i += 1
+    #print(res, i)
     
-print(i)
+print(i-1)
