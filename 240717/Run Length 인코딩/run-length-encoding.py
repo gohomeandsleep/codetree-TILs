@@ -14,7 +14,10 @@ for i in range(1,len(lst)):
 res_lst.append(lst[len(lst)-1])
 res_len.append(tmp)
 
-print(len(res_len) * 2)
+lst = []
 for i in range(len(res_len)):
-    print(res_lst[i], end='')
-    print(res_len[i], end='')
+    lst.extend(list(str(res_lst[i])))
+    lst.extend(list(str(res_len[i])))
+
+print(len(lst))
+print(*lst, sep='')
