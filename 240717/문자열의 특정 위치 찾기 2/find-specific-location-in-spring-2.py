@@ -9,6 +9,6 @@ res = []
 for i in range(5):
     if llist[i][2] == c or llist[i][3] == c:
         res.append(lst[i])
-
-print(*res, sep='\n')
+if res != []:
+    print(*res, sep='\n')
 print(len(res))
