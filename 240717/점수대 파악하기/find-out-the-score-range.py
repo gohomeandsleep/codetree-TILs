@@ -5,7 +5,8 @@ for i in range(len(lst)):
     if lst[i] == 0:
         break
     tmp = lst[i] // 10
-    res[tmp-1] += 1
+    if tmp > 0:
+        res[tmp-1] += 1
 
 res = res[::-1]
 for i in range(10):
