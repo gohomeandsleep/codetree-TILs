@@ -1,4 +1,7 @@
 a, b = input().split()
 a = list(a)
 
-print(a.index(b))
+try:
+    print(a.index(b))
+except:
+    print('No')
