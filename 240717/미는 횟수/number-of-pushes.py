@@ -9,5 +9,6 @@ while True:
         print(cnt+1)
         break
     cnt += 1
-    if cnt >= len(lst1):
+    if cnt >= len(lst1) + 1:
+        print(-1)
         break
