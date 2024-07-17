@@ -6,5 +6,5 @@ for i in range(10):
     if lst[i][-1] == c:
         res = False
         print(*lst[i], sep='')
-if res == False:
+if res == True:
     print("None")
