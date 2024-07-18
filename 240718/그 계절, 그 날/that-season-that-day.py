@@ -29,3 +29,5 @@ if is_valid(y, m, d) == True:
         print('Fall')
     else:
         print("Winter")
+else:
+    print(-1)
