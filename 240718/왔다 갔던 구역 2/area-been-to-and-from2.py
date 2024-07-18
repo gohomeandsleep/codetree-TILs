@@ -9,7 +9,7 @@ for _ in range(n):
             lst[i] += 1
         cur += int(l)
     else:
-        for i in range(cur, cur - int(l), -1):
+        for i in range(cur, cur - int(l)-1, -1):
             lst[i] += 1
         cur -= int(l)
     #print(cur)
