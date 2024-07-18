@@ -10,7 +10,7 @@ n = int(input())
 lst = []
 for i in range(1, n+1):
     x, y = map(int, input().split())
-    lst.append(point(x+y, i))
+    lst.append(point(abs(x)+abs(y), i))
 
 lst.sort(key = lambda x:x.dist)
 
