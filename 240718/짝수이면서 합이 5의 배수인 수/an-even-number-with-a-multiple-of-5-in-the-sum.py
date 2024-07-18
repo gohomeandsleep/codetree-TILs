@@ -1,6 +1,6 @@
 n = int(input())
 lst = list(str(n))
-print(lst)
+#print(lst)
 res = 0
 for i in lst:
     res += int(i)
