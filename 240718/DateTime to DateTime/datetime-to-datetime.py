@@ -2,8 +2,12 @@ dd, dh, dm = map(int ,input().split())
 pd, ph, pm = 11, 11, 11
 elapsed_time = 0
 
+
 while True:
     if pd == dd and ph == dh and pm == dm:
+        break
+    if elapsed_time > 5088:
+        elapsed_time = -1
         break
 
     elapsed_time += 1
