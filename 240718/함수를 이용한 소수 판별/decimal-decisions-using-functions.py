@@ -1,5 +1,5 @@
 def is_prime(a):
-    if a % 2 == 0:
+    if a < 2:
         return False
     else:
         for i in range(3, int(a ** 0.5) + 1, 2):
