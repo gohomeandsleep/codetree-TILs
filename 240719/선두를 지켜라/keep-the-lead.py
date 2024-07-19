@@ -22,6 +22,8 @@ if alst[0] > blst[0]:
     res.append(0)
 elif alst[0] < blst[0]:
     res.append(1)
+else:
+    res.append(2)
 
 for i in range(len(alst)):
     if alst[i] > blst[i]:
