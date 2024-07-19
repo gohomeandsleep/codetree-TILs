@@ -6,5 +6,6 @@ for i in range(T):
     lst[n-1] += 1
     if lst[n-1] == 3:
         res = n
+        break
 
 print(res)
