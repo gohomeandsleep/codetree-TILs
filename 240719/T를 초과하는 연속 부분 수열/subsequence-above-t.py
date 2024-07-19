@@ -8,12 +8,13 @@ else:
     tmp = 0
 
 for i in range(1, n):
-    if lst[i] > k and lst[i] > lst[i-1]:
+    if lst[i] > k:
         tmp += 1
     else:
         if res <= tmp:
             res = tmp
-        tmp = 1
+        tmp = 0
+    #print(res, tmp)
 
 if res <= tmp:
     res = tmp
