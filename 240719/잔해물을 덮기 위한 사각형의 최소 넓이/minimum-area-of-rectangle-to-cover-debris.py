@@ -6,8 +6,8 @@ for i in range(1001 + stpy1, 1002 + endpy1):
     for j in range(1001 + stpx1, 1002 + endpx1):
         lst[i][j] = 1
 
-for i in range(1001 + stpy2, 1001 + endpy2):
-    for j in range(1001 + stpx2, 1001 + endpx2):
+for i in range(1002 + stpy2, 1001 + endpy2):
+    for j in range(1002 + stpx2, 1001 + endpx2):
         lst[i][j] = 0
 
 res = []
