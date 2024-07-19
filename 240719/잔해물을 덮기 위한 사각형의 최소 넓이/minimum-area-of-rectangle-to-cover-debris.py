@@ -18,5 +18,7 @@ for i in range(2001):
 
 xlst = [coord[0] for coord in res]
 ylst = [coord[1] for coord in res]
-
-print((max(xlst) - min(xlst)) * (max(ylst) - min(ylst)))
+try:
+    print((max(xlst) - min(xlst)) * (max(ylst) - min(ylst)))
+except:
+    print(0)
