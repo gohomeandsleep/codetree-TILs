@@ -12,4 +12,7 @@ for i in range(1, n):
         tmp = 1
     #print(tmp, res)
 
-print(res)
+if len(lst) == 1:
+    print(1)
+else:
+    print(res)
