@@ -11,6 +11,8 @@ for i in range(1, n):
             res = tmp
         tmp = 1
     #print(tmp, res)
+if res <= tmp:
+    res = tmp
 
 if len(lst) == 1:
     print(1)
