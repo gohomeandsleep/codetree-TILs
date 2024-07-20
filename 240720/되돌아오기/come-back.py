@@ -15,5 +15,7 @@ for _ in range(T):
             print(cnt)
             break
         cnt += 1
+    if stat == 1:
+        break
 if stat == 0:
     print(-1)
