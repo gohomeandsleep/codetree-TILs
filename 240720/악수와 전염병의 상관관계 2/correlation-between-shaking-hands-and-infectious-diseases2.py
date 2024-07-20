@@ -20,11 +20,17 @@ for i in range(T):
         if res[b-1] == 0:
             res[b-1] = 1
             timer[b-1] = k
-        timer[a-1] -= 1
+            timer[a-1] -= 1
+        else:
+            timer[a-1] -= 1
+            timer[b-1] -= 1
     elif res[b-1] == 1 and timer[b-1] >= 1:
         if res[a-1] == 0:
             res[a-1] = 1
             timer[a-1] = k
-        timer[b-1] -= 1
+            timer[b-1] -= 1
+        else:
+            timer[a-1] -= 1
+            timer[b-1] -= 1
 
 print(*res, sep='')
