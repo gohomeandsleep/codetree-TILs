@@ -25,37 +25,37 @@ elif k <= 4 * n:
 
 cnt = 1
 prev = []
-while x >= 0 and x < n and y >= 0 and y < n:
+while True:
     if lst[y][x] == '/':
-        if len(prev) >= 1 and prev[-1] == lst[y][x]:
-            if len(prev) < 2 or prev[-2] != lst[y][x]:
-                d = (d - 1) % 4
-            else:
-                d = (d + 1) % 4
-        else:
+        if d % 2 == 0:
             d = (d + 1) % 4
-        x += dx[d]
-        y += dy[d]
-        try:
-            prev.append(lst[y][x])
-        except:
-            break
-        cnt += 1
-        
-    else:
-        if len(prev) >= 1 and prev[-1] == lst[y][x]:
-            if len(prev) < 2 or prev[-2] != lst[y][x]:
-                d = (d + 1) % 4
-            else:
-                d = (d - 1) % 4
         else:
             d = (d - 1) % 4
         x += dx[d]
         y += dy[d]
-        try:
-            prev.append(lst[y][x])
-        except:
+        if x < 0 or y < 0 or x > n or y > n:
             break
+        else:
+            try:
+                prev.append(lst[y][x])
+            except:
+                break
+        cnt += 1
+        
+    else:
+        if d % 2 == 0:
+            d = (d - 1) % 4
+        else:
+            d = (d + 1) % 4
+        x += dx[d]
+        y += dy[d]
+        if x < 0 or y < 0 or x > n or y > n:
+            break
+        else:
+            try:
+                prev.append(lst[y][x])
+            except:
+                break
         cnt += 1
         
     #print(d, y, x, prev)
