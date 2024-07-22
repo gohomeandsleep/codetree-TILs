@@ -15,7 +15,7 @@ for i in range(n):
     point[lst[i][0]] = lst[i][1]
 
 res = 0
-for i in range(max_l - k):
+for i in range(max_l - k + 1):
     if sum(point[i:i+k+1]) > res:
         res = sum(point[i:i+k+1])
 
