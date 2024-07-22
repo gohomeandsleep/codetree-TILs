@@ -12,14 +12,14 @@ for y in range(n):
             second = first
             first = tmp
             #print(x, prev_x, end="|\n")
-            if x <= prev_x:
+            if x < prev_x:
                 second = third
             prev_x = x + 2
             #print(prev_x)
         elif tmp >= second:
             third = second
             second = tmp
-            if x <= prev_x:
+            if x < prev_x:
                 second = third
            
         #print(first, second) 
