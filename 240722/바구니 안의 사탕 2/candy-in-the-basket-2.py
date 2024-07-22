@@ -9,16 +9,18 @@ for _ in range(n):
 
 point = [0 for _ in range(max_l + 1)]
 for i in range(n):
-    point[lst[i][0]] = lst[i][1]
-
+    if point[lst[i][0]] == 0:
+        point[lst[i][0]] = lst[i][1]
+    else:
+        point[lst[i][0]] += lst[i][1]
 
 if 2 * k + 1 > max_l:
     res = sum(point)
 else:
     res = 0
     for i in range(max_l - 2 * k + 1):
-        endp = int(i) + (2 * k) + 1
-        if sum(point[i:endp]) > res:
+        #print(i, i + 2 * k + 1, sum(point[i:i + (2 * k) + 1]))
+        if sum(point[i:i + (2 * k) + 1]) > res:
             res = sum(point[i:i+(2 * k)+1])
-
+        
 print(res)
