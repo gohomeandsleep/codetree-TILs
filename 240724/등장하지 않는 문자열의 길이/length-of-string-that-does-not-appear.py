@@ -13,7 +13,7 @@ for i in range(n):
     for j in range(i+1, n):
         tmp = lst[i:j+1]
         #print(tmp, lst[j+1:])
-        if sublist(lst[j+1:], tmp) and len(lst[j+1:]) > 0:
+        if sublist(lst[i+1:], tmp) and len(lst[i+1:]) > 0:
             #print(len(tmp))
             mxm = max(mxm, len(tmp))
 
