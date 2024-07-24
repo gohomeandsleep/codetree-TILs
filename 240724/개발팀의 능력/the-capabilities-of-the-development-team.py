@@ -13,4 +13,7 @@ for i in range(4):
             continue
         tmp = max(team1, team2, team3) - min(team1, team2, team3)
         res = min(res, tmp)
-print(res)
+if res == float('inf'):
+    print(-1)
+else:
+    print(res)
