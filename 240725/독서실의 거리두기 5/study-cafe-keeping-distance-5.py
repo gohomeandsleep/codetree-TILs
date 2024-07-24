@@ -7,17 +7,19 @@ for i in range(n):
         continue
     lst[i] = '1'
     p = float('inf')
-    if lst[0] == '1':
-        cnt = 0
-    else:
-        cnt = 1
-    for j in range(1, n):
-        if lst[j] == '1':
+    j = 0
+    while lst[j] == '0':
+        j += 1
+    #print(j)
+    cnt = 0
+    for k in range(j+1, n):
+        if lst[k] == '1':
             #print(p, res)
             p = min(p, cnt + 1)
             cnt = 0
         else:
             cnt += 1
+
     res = max(res, p)
     lst[i] = '0'
 print(res)
