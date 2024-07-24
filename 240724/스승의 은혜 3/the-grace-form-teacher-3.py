@@ -8,6 +8,7 @@ for i in range(n):
     cost = []
     for j in range(n):
         cost.append(tmp[j][0] + tmp[j][1])
+    #print(cost)
     cost.sort()
     budget = b
     j = 0
@@ -16,6 +17,7 @@ for i in range(n):
         budget -= cost[j]
         j += 1
         cnt += 1
+    tmp[i][0] = tmp[i][0] * 2
     if j == n and budget >= 0:
         mxm = cnt
         break
