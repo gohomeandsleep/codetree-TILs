@@ -12,14 +12,15 @@ point = [' ' for _ in range(max_l + 1)]
 for i in range(n):
     point[lst[i][0]] = lst[i][1]
 
+
+
 mxm = 0
-for i in range(1, max_l):
-    for j in range(i+1, max_l):
-        #print(i, j, point[i], point[j])
+for i in range(1, max_l + 1):
+    for j in range(i+1, max_l + 1):
         if point[i] != ' ' and point[j] != ' ':
-            cnt_g = point[i:j].count('G')
-            cnt_h = point[i:j].count('H')
-            #print(cnt_g, cnt_h)
+            cnt_g = point[i:j+1].count('G')
+            cnt_h = point[i:j+1].count('H')
+            #print(point[i:j], cnt_g, cnt_h)
             if cnt_g == 0 or cnt_h == 0 or cnt_g == cnt_h:
-                mxm = max(mxm, len(point[i:j]) + 1)
+                mxm = max(mxm, len(point[i:j]))
 print(mxm)
