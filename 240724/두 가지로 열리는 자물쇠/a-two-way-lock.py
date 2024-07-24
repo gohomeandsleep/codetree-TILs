@@ -10,4 +10,7 @@ for i in range(3):
     else:
         res = 0
 
-print(250 - res)
+if n <= 4:
+    print(n ** 3)
+else:
+    print(250 - res)
