@@ -6,4 +6,7 @@ for i in range(n):
     if tmp in lst:
         bomb.append(tmp)
     lst.append(tmp)
-print(max(bomb))
+try:
+    print(max(bomb))
+except:
+    print(-1)
