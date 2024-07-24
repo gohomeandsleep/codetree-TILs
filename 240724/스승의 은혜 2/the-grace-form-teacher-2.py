@@ -13,7 +13,7 @@ for i in range(n):
         budget -= tmp[j]
         j += 1
         cnt += 1
-    if j == n:
+    if j == n and budget >= 0:
         mxm = cnt
         break
     else:
