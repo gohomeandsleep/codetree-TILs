@@ -4,7 +4,8 @@ lst2 = list(map(int, input().split()))
 
 res = 1
 for i in range(3):
-    dist = min(abs(lst1[i] - lst2[i]), abs(min(lst1[i], lst2[i]) - max(lst1[i], lst2[i])))
+    #print(abs(lst1[i] - lst2[i]), abs(min(lst1[i], lst2[i]) + n - max(lst1[i], lst2[i])))
+    dist = min(abs(lst1[i] - lst2[i]), abs(min(lst1[i], lst2[i]) + n - max(lst1[i], lst2[i])))
     if dist < 5:
         res *= (5 - dist)
     else:
