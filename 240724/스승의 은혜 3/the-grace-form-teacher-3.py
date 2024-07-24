@@ -8,6 +8,7 @@ for i in range(n):
     cost = []
     for j in range(n):
         cost.append(tmp[j][0] + tmp[j][1])
+    cost.sort()
     budget = b
     j = 0
     cnt = 0
