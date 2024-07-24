@@ -9,9 +9,13 @@ for i in range(n):
     budget = b
     j = 0
     cnt = 0
-    while budget >= 0:
+    while budget >= 0 and j < n:
         budget -= tmp[j]
         j += 1
         cnt += 1
-    mxm = max(mxm, cnt - 1)
+    if j == n:
+        mxm = cnt
+        break
+    else:
+        mxm = max(mxm, cnt - 1)
 print(mxm)
