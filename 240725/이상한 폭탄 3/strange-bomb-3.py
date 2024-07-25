@@ -10,5 +10,8 @@ for i in range(n):
             res[tmp_k] += 1
         else:
             res[tmp_k] = 2
-max_value_key = max(res, key=res.get)
-print(max_value_key)
+try:
+    max_value_key = max(res, key=res.get)
+    print(max_value_key)
+except:
+    print(0)
