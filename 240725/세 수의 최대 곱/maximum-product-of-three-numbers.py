@@ -36,7 +36,7 @@ elif len(minus) == 1:
 else:
     if len(plus) == 0:
         print(0)
-    elif len(plus) > 3:
+    elif len(plus) < 3:
         for j in range(2):
             res *= minus[j]
         res *= max(plus)
