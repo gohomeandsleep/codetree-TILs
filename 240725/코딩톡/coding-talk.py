@@ -3,6 +3,10 @@ lst = [chr(65+i) for i in range(people)]
 
 for i in range(talk):
     person, unseen = input().split()
+
+    if i+1 == check and int(unseen) == 0:
+        lst = []
+        break
     if i >= check - 1:
         if person in lst:
             lst.remove(person)
