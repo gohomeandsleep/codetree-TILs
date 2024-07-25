@@ -1,6 +1,6 @@
 n = int(input())
 cnt = 0
-lead = 7 #0-a, 1-b, 2-c, 3-ab, 4-ac, 5-bc, 6-abc
+lead = 6 #0-a, 1-b, 2-c, 3-ab, 4-ac, 5-bc, 6-abc
 a = b = c = 0
 for i in range(n):
     name, score = input().split()
