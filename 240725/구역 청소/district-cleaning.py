@@ -1,11 +1,11 @@
 n, m = map(int, input().split())
 a, b = map(int, input().split())
 
-if n > a:
-    n, a = a, n
-    m, b = b, m
+lst = [0 for _ in range(101)]
+for i in range(n+1, m+1):
+    lst[i] = 1
 
-if m > a:
-    print(m - n + b - a - m + a)
-else:
-    print(m - n + b - a)
+for i in range(a+1, b+1):
+    lst[i] = 1
+
+print(sum(lst))
