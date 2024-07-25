@@ -1,12 +1,16 @@
 people, talk, check = map(int, input().split())
 lst = [chr(65+i) for i in range(people)]
-chat = [list(input().split()) for _ in range(talk)]
+chat = []
+for _ in range(talk):
+    name, unseen = input().split()
+    unseen = int(unseen)
+    chat.append([name, unseen])
 
-if chat[check-1][1] == '0': #안 읽은 사람이 0명인 경우 -> 출력할게 없음
+if chat[check-1][1] == 0: #안 읽은 사람이 0명인 경우 -> 출력할게 없음
     print('')
 else:
     lst.remove(chat[check-1][0])
-    for i in range(check, people):
+    for i in range(check, talk):
         try:
             lst.remove(chat[i][0])
         except:
