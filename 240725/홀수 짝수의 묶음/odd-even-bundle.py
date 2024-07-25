@@ -30,5 +30,5 @@ else:
             odd = 0
         else:
             odd -= 3
-            res += 1
+            res += 2
 print(res)
