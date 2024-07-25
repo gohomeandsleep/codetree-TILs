@@ -12,7 +12,11 @@ else:
         #print(i)
         if lst[i - m] == 1:
             res += 1
+            for j in range(i - m, i + m + 1):
+                lst[j] = 0
             i += 2 * m + 1
         else:
             i += 1
+    if sum(lst) > 0:
+        res += 1
 print(res)
