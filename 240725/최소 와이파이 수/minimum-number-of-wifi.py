@@ -12,7 +12,7 @@ else:
         #print(i)
         if lst[i - m] == 1:
             res += 1
-            for j in range(i - m, i + m + 1):
+            for j in range(i - m, min(i + m + 1, n)):
                 lst[j] = 0
             i += 2 * m + 1
         else:
