@@ -12,6 +12,7 @@ for i in range(n):
         else:
             if cnt >= k:
                 res += 1
+                break
             prev = tmp_lst[j]
             cnt = 1
     if cnt >= k:
@@ -29,6 +30,7 @@ for i in range(n):
         else:
             if cnt >= k:
                 res += 1
+                break
             prev = tmp_lst[j]
             cnt = 1
     if cnt >= k:
