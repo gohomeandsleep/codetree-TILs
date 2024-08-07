@@ -10,7 +10,7 @@ for stpy in range(n):
                 check = True
                 for i in range(stpy, endy):
                     for j in range(stpx, endx):
-                        if lst[i][j] < 0:check = False
+                        if lst[i][j] <= 0: check = False
                         else: cnt += 1
                 if check == True:
                     res = max(res, cnt)
