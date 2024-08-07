@@ -3,9 +3,14 @@ lst = [list(map(int, input().split())) for _ in range(l)]
 
 res = 0
 
+if l == 1:
+    rep = 1
+else:
+    rep = 2 * (l - 1)
+
 for i in range(l): #기준점 세로
     for j in range(l): #기준점 가로
-        for k in range(2 * (l - 1)): #기준점과의 거리
+        for k in range(rep): #기준점과의 거리
             cost = k ** 2 + (k + 1) ** 2
             p_sum = 0
             for m in range(l): #비교점 세로
