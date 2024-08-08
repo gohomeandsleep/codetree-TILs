@@ -18,10 +18,15 @@ for i in range(n):
     tmp_lst = []
     for j in range(n-1, -1, -1):
         tmp_lst.append(lst[j][i])
+    
+    real = []
+    zero = 0
     for j in range(n):
-        if tmp_lst[j] == 0:
-            tmp_lst.append(tmp_lst.pop(j))
-    #print(tmp_lst)
+        if tmp_lst[j] != 0:
+            real.append(tmp_lst[j])
+        else:
+            zero += 1
+    tmp_lst = real + [0 for _ in range(zero)]
     for j in range(n):
         lst[n-j-1][i] = tmp_lst[j]
 
